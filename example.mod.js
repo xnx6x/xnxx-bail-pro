@@ -4,6 +4,7 @@ import makeModularWASocket, {
 } from './lib/index.js';
 
 const modConfig = {
+    prefix: '.',
     queue: {
         global: { concurrency: 1, minIntervalMs: 100 },
         user: { concurrency: 1, minIntervalMs: 250 },
@@ -13,20 +14,12 @@ const modConfig = {
         maxRetries: 3,
         baseDelayMs: 1000
     },
-    rules: [
-        {
-            id: 'block-link',
-            when: {
-                type: 'condition',
-                left: 'text',
-                operator: 'contains',
-                right: 'https://'
-            },
-            then: [
-                { type: 'reply', payload: { text: 'Links are not allowed here.' } }
-            ]
-        }
-    ],
+    antiSpam: {
+        floodWindowMs: 7000,
+        floodThreshold: 6,
+        cooldownMs: 15000,
+        autoMuteMs: 60000
+    },
     permissions: {
         roles: {
             'owner-number': 'admin'
@@ -64,10 +57,10 @@ async function main() {
         if (text === '.buttons') {
             await sock.mod.sendButtons(jid, {
                 text: 'Choose an action',
-                footer: 'Baileys Mod',
+                footer: 'XNXX Bail Pro',
                 buttons: [
-                    { id: 'battle:start', text: 'Start Battle' },
-                    { id: 'menu:open', text: 'Open Menu' }
+                    { id: 'menu:main:ping', text: 'Ping' },
+                    { id: 'menu:main:stats', text: 'Stats' }
                 ]
             });
         }
@@ -81,8 +74,9 @@ async function main() {
                     {
                         title: 'Systems',
                         rows: [
-                            { id: 'analytics', title: 'Analytics', description: 'View group activity' },
-                            { id: 'games', title: 'Games', description: 'Play PvP and story mode' }
+                            { id: 'menu:main:ping', title: 'Ping', description: 'Check bot status' },
+                            { id: 'menu:main:stats', title: 'Stats', description: 'View group stats' },
+                            { id: 'menu:main:battle', title: 'Battle', description: 'Start battle demo' }
                         ]
                     }
                 ]
@@ -95,14 +89,14 @@ async function main() {
                 footer: 'Page demo',
                 cards: [
                     {
-                        title: 'Card One',
-                        text: 'Image or video card support starts here',
-                        buttons: [{ name: 'quick_reply', params: { display_text: 'Open', id: 'card:1' } }]
+                        title: 'Control Runtime',
+                        text: 'Commands, cooldowns, anti-spam, permissions',
+                        buttons: [{ name: 'quick_reply', params: { display_text: 'Open', id: 'runtime:open' } }]
                     },
                     {
-                        title: 'Card Two',
-                        text: 'Add your own imageUrl/video flow wrapper next',
-                        buttons: [{ name: 'quick_reply', params: { display_text: 'Next', id: 'card:2' } }]
+                        title: 'Game Layer',
+                        text: 'PvP, story mode, detective state, loot',
+                        buttons: [{ name: 'quick_reply', params: { display_text: 'Play', id: 'game:play' } }]
                     }
                 ]
             });
@@ -111,6 +105,7 @@ async function main() {
 
     const sessions = createSessionManager();
     console.log('Session manager ready:', sessions.listSessions());
+    console.log('Starter commands:', sock.mod.commands.list().map(command => command.name).join(', '));
 }
 
 main().catch(console.error);

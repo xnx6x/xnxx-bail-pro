@@ -5,98 +5,126 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/xnxx-bail-pro"><img src="https://img.shields.io/npm/v/xnxx-bail-pro?style=for-the-badge&logo=npm&color=CB3837" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/xnxx-bail-pro"><img src="https://img.shields.io/npm/dm/xnxx-bail-pro?style=for-the-badge&logo=npm&color=F97316" alt="npm downloads" /></a>
-  <a href="https://github.com/xnx6x/xnxx-bail-pro"><img src="https://img.shields.io/github/stars/xnx6x/xnxx-bail-pro?style=for-the-badge&logo=github&color=111827" alt="github stars" /></a>
-  <a href="https://github.com/WhiskeySockets/Baileys"><img src="https://img.shields.io/badge/upstream-Baileys-2563EB?style=for-the-badge&logo=github" alt="upstream baileys" /></a>
+  <img src="https://img.shields.io/npm/v/xnxx-bail-pro?style=for-the-badge&logo=npm&color=CB3837" alt="npm version" />
+  <img src="https://img.shields.io/npm/dm/xnxx-bail-pro?style=for-the-badge&logo=npm&color=F97316" alt="npm downloads" />
+  <img src="https://img.shields.io/github/stars/xnx6x/xnxx-bail-pro?style=for-the-badge&logo=github&color=111827" alt="github stars" />
+  <img src="https://img.shields.io/badge/runtime-plugin%20driven-0F766E?style=for-the-badge" alt="plugin driven runtime" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1200&color=FF6B6B&center=true&vCenter=true&width=920&lines=Interactive+messages+and+carousel+flows;Queue+system%2C+retry+engine%2C+multi-session;Rules%2C+analytics%2C+permissions%2C+anti-spam;Built+for+Baileys-style+WhatsApp+automation" alt="animated intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1100&color=FF6B6B&center=true&vCenter=true&width=980&lines=WhatsApp+automation+with+a+real+runtime;Plugin+system%2C+menus%2C+permissions%2C+cooldowns;Queues%2C+retry+engine%2C+analytics%2C+multi-session;Interactive+UI+plus+game+and+story+foundations" alt="animated intro" />
 </p>
 
 <p align="center">
-  A modular WhatsApp Web API fork inspired by Baileys, now extended with a clean mod framework for automation, UI flows, analytics, rules, sessions, and game systems.
+  A Baileys-based WhatsApp Web API fork with a stronger platform layer: command runtime, plugin loader, menu routing, moderation systems, analytics, queues, retry logic, sessions, and rich interactive helpers.
 </p>
-
----
-
-## Why this fork
-
-Most Baileys-based mods keep stuffing features directly into socket internals until the project becomes hard to maintain.
-
-This version moves toward a cleaner shape:
-
-- `Socket core` handles connection, relay, auth, media, and protocol work
-- `Mod framework` handles queues, retrying, rules, analytics, permissions, sessions, and UI helpers
-- `Feature modules` stay isolated so new systems can be added without wrecking the base
-
-The result is easier debugging, faster experiments, and a better path for keeping up with upstream Baileys changes.
-
----
-
-## New in this mod layer
-
-- Fixed outbound `buttons` and `list` payload generation
-- Added import-safe banner behavior
-- Added modular framework helpers on top of the extracted package build
-- Added queue system with global, per-user, and per-group scheduling
-- Added retry engine with backoff support
-- Added store adapters for memory, Redis, and Mongo patterns
-- Added anti-spam, rate limiting, and permission scaffolding
-- Added analytics counters and group heatmap primitives
-- Added rule engine with node-style conditions and actions
-- Added session manager for isolated WhatsApp accounts
-- Added UI helpers for buttons, lists, hybrid carousels, flow steps, and progress updates
-- Added game foundations for PvP, loot RNG, story mode, and detective state
-
----
-
-## Architecture
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xnx6x/xnxx-bail-pro/main/assets/module-map.svg" alt="Module architecture diagram" width="100%" />
+  <a href="https://www.npmjs.com/package/xnxx-bail-pro">NPM</a>
+  ·
+  <a href="https://github.com/xnx6x/xnxx-bail-pro">GitHub</a>
+  ·
+  <a href="https://github.com/WhiskeySockets/Baileys">Upstream Baileys</a>
+  ·
+  <a href="https://baileys.wiki">Docs</a>
 </p>
 
 ---
 
-## Feature map
+## Built for a real mod, not just a fork
 
-### Core systems
+Most Baileys mods become hard to maintain because every new idea gets shoved into socket files.
 
-- Queue system
-- Retry engine
-- Store system
-- Multi-session scaffolding
+This project pushes in a different direction:
 
-### Control systems
+- low-level socket and protocol behavior stays in the library core
+- runtime systems live in `lib/Mod`
+- commands, menus, plugins, rules, and games can grow without wrecking the transport layer
 
-- Anti-spam engine
-- Rate limiter
-- Permission system
-- Rule engine
+That makes the project easier to extend, easier to debug, and much easier to keep alive when upstream Baileys changes again.
 
-### UI systems
+---
 
-- Buttons
-- Lists
-- Carousel helpers
-- Multi-step flow helpers
-- Progress update helpers
+## What changed
 
-### Game systems
+- fixed outbound `buttons` and `list` generation
+- added a proper command runtime with aliases and cooldowns
+- added plugin registration for commands, rules, and roles
+- added menu routing for button and list responses
+- added anti-spam, mute flow, and rate limiting
+- added permission scaffolding for admin, mod, vip, and custom policies
+- added queue system with global, per-user, and per-group scheduling
+- added retry engine with backoff
+- added analytics counters and group activity data
+- added session manager and isolated socket helper
+- added starter game systems for battle, loot, story state, and detective state
+- improved the README and package visuals for GitHub and npm
+
+---
+
+## Visual map
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xnx6x/xnxx-bail-pro/main/assets/module-map.svg" alt="Architecture diagram" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xnx6x/xnxx-bail-pro/main/assets/readme-showcase.svg" alt="Feature showcase" width="100%" />
+</p>
+
+---
+
+## Feature stack
+
+### Runtime
+
+- plugin-based command system
+- aliases and cooldowns
+- menu routing
+- rich execution context
+
+### Moderation
+
+- anti-spam engine
+- rate limiter
+- permission system
+- node-style rule engine
+
+### Delivery
+
+- global queue
+- per-user queue
+- per-group queue
+- retry engine
+
+### UI
+
+- buttons
+- lists
+- hybrid carousel helper
+- multi-step flow helper
+- progress update helper
+
+### Data
+
+- memory adapter
+- Redis adapter pattern
+- Mongo adapter pattern
+- TTL-backed state
+
+### Sessions and analytics
+
+- isolated multi-session manager
+- message counters
+- active user tracking
+- group activity heatmap primitives
+
+### Game foundations
 
 - PvP battle state
-- RNG loot drops
-- Story branching state
-- Detective case state
-
-### Utility systems
-
-- Analytics counters
-- Message-forward scaffolding
-- Cache-ready data adapters
-- Session isolation helper
+- loot roll helper
+- story progression state
+- detective case state
 
 ---
 
@@ -106,7 +134,7 @@ The result is easier debugging, faster experiments, and a better path for keepin
 npm install xnxx-bail-pro
 ```
 
-Or use it as a Baileys alias:
+Or alias it:
 
 ```json
 {
@@ -130,6 +158,7 @@ async function connect() {
     auth: state,
     printQRInTerminal: true
   }, {
+    prefix: '.',
     queue: {
       global: { concurrency: 1, minIntervalMs: 100 },
       user: { concurrency: 1, minIntervalMs: 250 },
@@ -138,29 +167,6 @@ async function connect() {
   })
 
   sock.ev.on('creds.update', saveCreds)
-  sock.ev.on('connection.update', ({ connection }) => {
-    if (connection === 'open') {
-      console.log('connected')
-    }
-  })
-
-  sock.ev.on('messages.upsert', async ({ messages }) => {
-    const msg = messages?.[0]
-    const jid = msg?.key?.remoteJid
-    const text = msg?.message?.conversation || msg?.message?.extendedTextMessage?.text || ''
-    if (!jid || msg?.key?.fromMe) return
-
-    if (text === '.buttons') {
-      await sock.mod.sendButtons(jid, {
-        text: 'Choose an action',
-        footer: 'XNXX Bail Pro',
-        buttons: [
-          { id: 'menu:open', text: 'Menu' },
-          { id: 'battle:start', text: 'Battle' }
-        ]
-      })
-    }
-  })
 }
 
 connect()
@@ -168,80 +174,123 @@ connect()
 
 ---
 
-## Rich UI examples
+## Starter commands
 
-### Buttons
+The runtime loads starter plugins by default.
 
-```js
-await sock.mod.sendButtons(jid, {
-  text: 'Choose an action',
-  footer: 'Main control panel',
-  buttons: [
-    { id: 'battle:start', text: 'Start Battle' },
-    { id: 'stats:view', text: 'View Stats' }
-  ]
-})
-```
+- `.ping`
+- `.menu`
+- `.help`
+- `.stats`
+- `.battle`
+- `.attack`
+- `.defend`
 
-### Lists
+These are there to prove the framework works immediately. Replace them with your own plugins whenever you want.
 
-```js
-await sock.mod.sendList(jid, {
-  title: 'Main Menu',
-  text: 'Pick one module',
-  buttonText: 'Open',
-  sections: [
-    {
-      title: 'Systems',
-      rows: [
-        { id: 'analytics', title: 'Analytics', description: 'See activity data' },
-        { id: 'games', title: 'Games', description: 'Play PvP and story mode' }
-      ]
-    }
-  ]
-})
-```
+---
 
-### Hybrid carousel
+## Example: plugin-driven commands
 
 ```js
-await sock.mod.sendHybridCarousel(jid, {
-  body: 'Carousel demo',
-  footer: 'Page 1',
-  cards: [
-    {
-      title: 'Card One',
-      text: 'Attach media and per-card buttons',
-      buttons: [{ name: 'quick_reply', params: { display_text: 'Open', id: 'card:1' } }]
-    },
-    {
-      title: 'Card Two',
-      text: 'Use pagination helpers for long decks',
-      buttons: [{ name: 'quick_reply', params: { display_text: 'Next', id: 'card:2' } }]
-    }
-  ]
+sock.mod.registerCommand({
+  name: 'owner',
+  aliases: ['adminpanel'],
+  permission: 'admin.command',
+  cooldownMs: 2000,
+  execute: async ({ reply }) => {
+    await reply('owner panel opened')
+  }
 })
 ```
 
 ---
 
-## Module API
-
-### Socket creation
+## Example: menus that route back into commands
 
 ```js
-import makeModularWASocket from 'xnxx-bail-pro'
+const menu = sock.mod.menus.buildListMenu({
+  id: 'main',
+  title: 'Main Menu',
+  text: 'Choose a system',
+  sections: [
+    {
+      title: 'Core',
+      rows: [
+        { id: 'ping', label: 'Ping', description: 'Check status', command: 'ping' },
+        { id: 'stats', label: 'Stats', description: 'View analytics', command: 'stats' }
+      ]
+    }
+  ]
+})
+
+await sock.mod.menus.register(jid, menu)
+await sock.mod.sendList(jid, menu.payload)
 ```
 
-### Session manager
+When the user taps a row, the runtime can resolve the menu item and execute the mapped command.
+
+---
+
+## Example: rules without messy if/else chains
 
 ```js
-import { createSessionManager } from 'xnxx-bail-pro'
-
-const sessions = createSessionManager()
+const modConfig = {
+  rules: [
+    {
+      id: 'link-warning',
+      when: {
+        type: 'group',
+        operator: 'AND',
+        children: [
+          { type: 'condition', left: 'isGroup', operator: 'equals', right: true },
+          { type: 'condition', left: 'text', operator: 'contains', right: 'https://' }
+        ]
+      },
+      then: [
+        { type: 'warn', payload: { text: 'Links are restricted in this chat.' } }
+      ]
+    }
+  ]
+}
 ```
 
-### Available helpers
+Supported comparators include `contains`, `equals`, `startsWith`, `regex`, `gt`, and `lt`.
+
+---
+
+## Example: battle foundation
+
+```js
+await sock.mod.games.createBattle(`battle-${jid}`, [
+  { id: 'player1', name: 'Player 1' },
+  { id: 'enemy', name: 'Enemy' }
+])
+
+const update = await sock.mod.games.performBattleAction(`battle-${jid}`, 'player1', 'attack')
+```
+
+This is a foundation layer, not a finished RPG. It gives you the state engine to build on.
+
+---
+
+## Main exports
+
+```js
+import makeModularWASocket, {
+  createModFramework,
+  createSessionManager,
+  CommandRegistry,
+  CommandRuntime,
+  PluginManager,
+  MenuSystem,
+  QueueSystem,
+  RetryEngine,
+  RuleEngine
+} from 'xnxx-bail-pro'
+```
+
+Useful helpers:
 
 - `sock.mod.sendQueued(jid, content, options)`
 - `sock.mod.sendButtons(jid, payload, options)`
@@ -249,46 +298,41 @@ const sessions = createSessionManager()
 - `sock.mod.sendHybridCarousel(jid, payload, options)`
 - `sock.mod.sendFlowStep(jid, flow, state, options)`
 - `sock.mod.sendProgressUpdate(jid, payload, editKey, options)`
+- `sock.mod.registerCommand(command)`
+- `sock.mod.use(plugin)`
 
 ---
 
-## Rule engine example
+## Project layout
 
-```js
-const modConfig = {
-  rules: [
-    {
-      id: 'block-link',
-      when: {
-        type: 'condition',
-        left: 'text',
-        operator: 'contains',
-        right: 'https://'
-      },
-      then: [
-        { type: 'reply', payload: { text: 'Links are not allowed here.' } }
-      ]
-    }
-  ]
-}
+```text
+lib/
+  Mod/
+    command-system.js
+    control-system.js
+    menu-system.js
+    plugin-system.js
+    queue-system.js
+    retry-engine.js
+    rule-engine.js
+    starter-plugins.js
+    store-system.js
+    ui-system.js
 ```
 
-This is intentionally structured like a node system, not a pile of random `if/else` checks.
-
 ---
 
-## Upstream maintenance
+## Upstream note
 
-This package currently trails upstream `@whiskeysockets/baileys`, and upstream has already announced breaking changes in the `7.x` line.
+This package still needs careful upstream maintenance because `@whiskeysockets/baileys` keeps moving and the `7.x` line already introduced breaking changes.
 
-Recommended maintenance strategy:
+The safest long-term strategy is:
 
-1. Keep protocol and socket fixes as close to upstream as possible.
-2. Keep mod systems in isolated files under `lib/Mod`.
-3. Rebase transport and message-building logic carefully when upstream changes land.
-4. Avoid stuffing game logic, analytics, and rules directly into low-level socket files.
+1. keep protocol and socket fixes close to upstream
+2. keep platform features isolated in `lib/Mod`
+3. move flashy bot systems into plugins, not transport files
 
-Upstream resources:
+Upstream references:
 
 - [WhiskeySockets/Baileys](https://github.com/WhiskeySockets/Baileys)
 - [Baileys migration guide](https://whiskey.so/migrate-latest)
@@ -298,15 +342,8 @@ Upstream resources:
 
 ## Local development
 
-Clone the real repository, then install:
-
 ```bash
 npm install
-```
-
-Run your own entry file, for example:
-
-```bash
 node example.mod.js
 ```
 
@@ -318,15 +355,6 @@ set XNXX_BAIL_PRO_SHOW_BANNER=1
 
 ---
 
-## Files added for this redesign
-
-- `assets/readme-banner.svg`
-- `assets/module-map.svg`
-- `example.mod.js`
-- `lib/Mod/*`
-
----
-
 ## Disclaimer
 
-This library is not affiliated with WhatsApp. Use it responsibly, respect platform rules, and do not use it for abuse, spam, or harassment.
+This project is not affiliated with WhatsApp. Use it responsibly and do not use it for abuse, spam, scams, or harassment.

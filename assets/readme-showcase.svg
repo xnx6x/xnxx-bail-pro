@@ -1,0 +1,48 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="110" y1="50" x2="1130" y2="670" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#091420"/>
+      <stop offset="0.55" stop-color="#13283F"/>
+      <stop offset="1" stop-color="#0A1827"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="170" y1="130" x2="960" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF5E5B"/>
+      <stop offset="0.5" stop-color="#FF9F1C"/>
+      <stop offset="1" stop-color="#FFE66D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" rx="32" fill="url(#bg2)"/>
+  <rect x="56" y="56" width="1168" height="608" rx="28" fill="#07111F" stroke="#1F3D58"/>
+
+  <text x="84" y="120" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">Feature Showcase</text>
+  <text x="84" y="156" fill="#8CB4D6" font-family="Segoe UI, Arial, sans-serif" font-size="22">The systems that turn this from a fork into a real bot platform</text>
+
+  <rect x="84" y="208" width="264" height="168" rx="24" fill="#13283F"/>
+  <text x="110" y="254" fill="url(#fire)" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Command Runtime</text>
+  <text x="110" y="292" fill="#DCEAF7" font-family="Segoe UI, Arial, sans-serif" font-size="20">Plugin loader</text>
+  <text x="110" y="322" fill="#DCEAF7" font-family="Segoe UI, Arial, sans-serif" font-size="20">Aliases and cooldowns</text>
+  <text x="110" y="352" fill="#DCEAF7" font-family="Segoe UI, Arial, sans-serif" font-size="20">Rich execution context</text>
+
+  <rect x="370" y="208" width="264" height="168" rx="24" fill="#1A2E22"/>
+  <text x="396" y="254" fill="#AEF359" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Moderation Stack</text>
+  <text x="396" y="292" fill="#E6F7E8" font-family="Segoe UI, Arial, sans-serif" font-size="20">Anti-spam and muting</text>
+  <text x="396" y="322" fill="#E6F7E8" font-family="Segoe UI, Arial, sans-serif" font-size="20">Permissions and rules</text>
+  <text x="396" y="352" fill="#E6F7E8" font-family="Segoe UI, Arial, sans-serif" font-size="20">Per-command rate limits</text>
+
+  <rect x="656" y="208" width="264" height="168" rx="24" fill="#311A3A"/>
+  <text x="682" y="254" fill="#F0ABFC" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Interactive UI</text>
+  <text x="682" y="292" fill="#F9E8FF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Buttons and lists</text>
+  <text x="682" y="322" fill="#F9E8FF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Menu routing</text>
+  <text x="682" y="352" fill="#F9E8FF" font-family="Segoe UI, Arial, sans-serif" font-size="20">Carousel and flows</text>
+
+  <rect x="942" y="208" width="238" height="168" rx="24" fill="#3A2712"/>
+  <text x="968" y="254" fill="#FFD166" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">Data + State</text>
+  <text x="968" y="292" fill="#FFF2D6" font-family="Segoe UI, Arial, sans-serif" font-size="20">Memory / Redis / Mongo</text>
+  <text x="968" y="322" fill="#FFF2D6" font-family="Segoe UI, Arial, sans-serif" font-size="20">Sessions and cache</text>
+  <text x="968" y="352" fill="#FFF2D6" font-family="Segoe UI, Arial, sans-serif" font-size="20">Analytics heatmap</text>
+
+  <rect x="84" y="420" width="1096" height="186" rx="28" fill="#0D2237" stroke="#224866"/>
+  <text x="118" y="472" fill="#F8FAFC" font-family="Consolas, monospace" font-size="26">.menu   .ping   .stats   .battle   .attack   .defend</text>
+  <text x="118" y="516" fill="#A8C5DF" font-family="Segoe UI, Arial, sans-serif" font-size="22">Starter plugins are included so you can test the platform immediately, then swap in your own modules.</text>
+  <text x="118" y="558" fill="#DCEAF7" font-family="Segoe UI, Arial, sans-serif" font-size="20">Use the runtime as the stable base, then layer media pipelines, automation, games, and complex UI on top.</text>
+</svg>
