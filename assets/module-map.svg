@@ -1,0 +1,38 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="28" fill="#071826"/>
+  <text x="70" y="90" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">Mod Architecture</text>
+  <text x="70" y="128" fill="#9BC1DE" font-family="Segoe UI, Arial, sans-serif" font-size="22">A clean extension layer on top of the extracted socket build</text>
+
+  <rect x="70" y="180" width="1060" height="120" rx="24" fill="#0D2237" stroke="#234864"/>
+  <text x="100" y="230" fill="#FFD166" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="800">Socket Core</text>
+  <text x="100" y="268" fill="#D1E5F7" font-family="Segoe UI, Arial, sans-serif" font-size="22">Connection, relayMessage, media upload, auth state, WhatsApp message encoding</text>
+
+  <rect x="70" y="350" width="240" height="140" rx="22" fill="#1F2937"/>
+  <text x="98" y="404" fill="#FFF1B8" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Queue + Retry</text>
+  <text x="98" y="440" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Per-user, per-group, global lanes</text>
+  <text x="98" y="468" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Exponential resend logic</text>
+
+  <rect x="340" y="350" width="240" height="140" rx="22" fill="#102A43"/>
+  <text x="368" y="404" fill="#BEE3F8" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Control Layer</text>
+  <text x="368" y="440" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Anti-spam, rate limits, permissions</text>
+  <text x="368" y="468" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Rule-node execution</text>
+
+  <rect x="610" y="350" width="240" height="140" rx="22" fill="#183A2E"/>
+  <text x="638" y="404" fill="#B9FBC0" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Data Layer</text>
+  <text x="638" y="440" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Memory, Redis, Mongo adapters</text>
+  <text x="638" y="468" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">TTL cache and session state</text>
+
+  <rect x="880" y="350" width="250" height="140" rx="22" fill="#3C1642"/>
+  <text x="908" y="404" fill="#F3C4FB" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">UI + Games</text>
+  <text x="908" y="440" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">Buttons, lists, carousel, flows</text>
+  <text x="908" y="468" fill="#CFD8E3" font-family="Segoe UI, Arial, sans-serif" font-size="20">PvP, story mode, detective logic</text>
+
+  <path d="M190 300V350" stroke="#5BA3D0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M460 300V350" stroke="#5BA3D0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M730 300V350" stroke="#5BA3D0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1005 300V350" stroke="#5BA3D0" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="70" y="560" width="1060" height="120" rx="24" fill="#0D2237" stroke="#234864"/>
+  <text x="100" y="608" fill="#FFD166" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">Developer API</text>
+  <text x="100" y="646" fill="#D1E5F7" font-family="Consolas, monospace" font-size="22">sock.mod.sendButtons()   sock.mod.sendList()   sock.mod.sendHybridCarousel()   createSessionManager()</text>
+</svg>

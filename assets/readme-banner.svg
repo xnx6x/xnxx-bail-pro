@@ -1,0 +1,59 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1180" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.45" stop-color="#0E2238"/>
+      <stop offset="1" stop-color="#071826"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="110" x2="995" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4D6D"/>
+      <stop offset="0.5" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FFD166"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="900" y1="80" x2="1100" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55D6BE" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#55D6BE" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1280" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
+  <g filter="url(#blur)" opacity="0.8">
+    <circle cx="1070" cy="120" r="120" fill="url(#soft)"/>
+    <circle cx="250" cy="560" r="150" fill="#FF4D6D" fill-opacity="0.18"/>
+    <circle cx="940" cy="500" r="160" fill="#FFD166" fill-opacity="0.12"/>
+  </g>
+
+  <rect x="70" y="78" width="1140" height="484" rx="28" fill="#081A2B" fill-opacity="0.7" stroke="#1F3A55"/>
+  <rect x="94" y="102" width="276" height="40" rx="20" fill="#0E2238" stroke="#234A67"/>
+  <text x="124" y="128" fill="#9AC7FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">MODULAR WHATSAPP SOCKET</text>
+
+  <text x="94" y="220" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="78" font-weight="800">XNXX Bail Pro</text>
+  <text x="94" y="286" fill="url(#accent)" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Interactive UI, queues, rules, analytics, sessions, games</text>
+  <text x="94" y="352" fill="#C7D9EE" font-family="Segoe UI, Arial, sans-serif" font-size="28">A production-style Baileys mod layer built for automation and rich WhatsApp flows.</text>
+
+  <rect x="94" y="405" width="214" height="58" rx="16" fill="#FF5A5F"/>
+  <text x="132" y="442" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">Buttons + Lists</text>
+
+  <rect x="326" y="405" width="178" height="58" rx="16" fill="#1D3557"/>
+  <text x="360" y="442" fill="#CFE8FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">Retry Engine</text>
+
+  <rect x="522" y="405" width="182" height="58" rx="16" fill="#14532D"/>
+  <text x="558" y="442" fill="#D8FFE1" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">Rule System</text>
+
+  <rect x="722" y="405" width="164" height="58" rx="16" fill="#5B2A86"/>
+  <text x="754" y="442" fill="#F0DBFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">PvP Games</text>
+
+  <rect x="920" y="150" width="230" height="300" rx="24" fill="#07111F" stroke="#294D6B"/>
+  <rect x="948" y="184" width="176" height="108" rx="18" fill="url(#accent)"/>
+  <rect x="948" y="318" width="176" height="16" rx="8" fill="#DCEFFF" fill-opacity="0.9"/>
+  <rect x="948" y="346" width="120" height="12" rx="6" fill="#98B7D6" fill-opacity="0.8"/>
+  <rect x="948" y="384" width="78" height="34" rx="10" fill="#163049"/>
+  <rect x="1046" y="384" width="78" height="34" rx="10" fill="#163049"/>
+  <text x="970" y="408" fill="#D6EBFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Battle</text>
+  <text x="1068" y="408" fill="#D6EBFF" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Menu</text>
+
+  <text x="948" y="508" fill="#7FA8C9" font-family="Consolas, monospace" font-size="20">sock.mod.sendButtons()</text>
+</svg>
